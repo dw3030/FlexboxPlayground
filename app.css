@@ -1,14 +1,28 @@
 body {
-    font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 h1 {
-    text-align: center;
+  text-align: center;
 }
 #container {
-    background-color: #003049;
-    width: 90%;
-    height: 500px;
-    margin: 0 auto;
-    border: 5px solid #003049;
+  background-color: #003049;
+  width: 90%;
+  height: 500px;
+  margin: 0 auto;
+  border: 5px solid #003049;
+  display: flex;
+  /* using display set to flex keeps all divs from overlapping the container */
+  /* default flex-direction is row */
+  flex-direction: row;
+  /* flex-direction column or row specifies main axis... column-reverse or row-reverse will change the starting point of main axis to the opposite side of default  */
+  /* justify-content: flex-start; */
+  /* justify-content flex-end pushes it to end of main axis, still left to right */
+  justify-content: space-between;
+  /* justify-content: space-between divides up the free available space btw elements, space-around will divide it on each side of each element */
+  /* space-evenly ensures the space to be even btw elements and btw elements and container */
 }
 
+#container div {
+  width: 200px;
+  height: 200px;
+}
