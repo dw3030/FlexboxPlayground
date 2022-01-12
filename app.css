@@ -7,14 +7,16 @@ h1 {
 #container {
   background-color: #003049;
   width: 90%;
-  height: 500px;
+  height: 200px;
   margin: 0 auto;
   border: 5px solid #003049;
+
   display: flex;
   /* using display set to flex keeps all divs from overlapping the container */
   /* default flex-direction is row */
   flex-direction: row;
   /* flex-direction column or row specifies main axis... column-reverse or row-reverse will change the starting point of main axis to the opposite side of default  */
+
   /* justify-content: flex-start; */
   /* justify-content flex-end pushes it to end of main axis, still left to right */
   justify-content: center;
@@ -24,7 +26,7 @@ h1 {
   flex-wrap: wrap;
   /* flex-wrap: wrap, no wrap, and wrap-reverse will dictate the direction of the cross axis and direction it will wrap if applicable */
 
-  align-items: flex-start;
+  /* align-items: flex-start; */
   /* align items to either beginning or end or center of the cross axis*/
 
   /* align-content: space-between; */
@@ -35,7 +37,19 @@ h1 {
   width: 200px;
   height: 200px;
   text-align: center;
+  flex-basis: 200px;
+  /* flex-basis defines initial size of an element before addl space is distributed */
+  flex-grow: 1;
+  /* max-width: 300px; */
+  /* can use min or max width to prevent the flex-grow from impacting the div too much */
 }
+
+/* 
+div:nth-of-type(1) {
+  flex-grow: 1;
+  flex-grow will extend to take up the avail space in the container...if multiple divs use it, they will divide it amongst themselves
+}. */
+
 /* 
 div:nth-of-type(3) {
   align-self: flex-end;
@@ -43,8 +57,4 @@ div:nth-of-type(3) {
 
 div:nth-of-type(2) {
   align-self: center;
-} */
-
-/* div:nth-of-type(5) {
-  align-self: left;
 } */
